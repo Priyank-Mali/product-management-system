@@ -51,7 +51,7 @@ def customer_registration_view(request):
             messages.success(request,"Retistration Done.\n You password is you mobile number")
             return redirect("customer_login_view")
         else:
-            messages.error(request,"something went wrong")
+            messages.error(request,"Email is already present")
             return redirect("customer_registration_view")
     return render(request,'customer/cutomer_registration.html',context)
 
